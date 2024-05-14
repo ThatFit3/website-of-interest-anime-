@@ -1,0 +1,33 @@
+color palette:
+1. #FDF7E4
+2. #FAEED1
+3. #DED0B6
+4. #BBAB8C
+
+content:
+
+1. intro
+2. genre
+    - action
+    - romance
+    - fantasy
+    - sci-fi
+
+3. source material
+    - manga
+    - novel
+    - manhwa
+
+4. season highlight
+    - tensura
+    - yozakura family
+    - Demon slayer
+    - wind breaker
+    - elf bride
+
+5. personal fav.
+    - horimiya
+    - ancient magus bride
+    - tensura
+    - sages' grandson
+    - my happy marriage

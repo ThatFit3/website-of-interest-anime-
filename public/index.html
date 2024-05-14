@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="en">
+  <head class="scroll-smooth">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header class="fixed left-0 top-0 z-50 m-0 w-full md:px-3 md:py-5">
+      <nav
+        class="nav-head mx-auto flex w-full flex-row-reverse items-center bg-white px-4 py-4 md:justify-around md:bg-transparent md:px-0 md:py-0"
+      >
+        <div
+          class="nav-links absolute left-0 top-0 w-full translate-y-[-100%] bg-white duration-[0.3s] md:static md:w-fit md:translate-y-0 md:bg-transparent"
+        >
+          <ul
+            class="flex flex-col gap-[4vw] bg-white p-2 px-5 py-7 md:flex-row md:items-center md:rounded-full md:border-2 md:border-black md:py-2"
+          >
+            <li class="text-white">
+              <a
+                href="#intro"
+                class="rounded-full bg-black p-1 px-3 text-lg text-white duration-[200ms]"
+                >Intro</a
+              >
+            </li>
+            <li class="text-white">
+              <a
+                href="#genre"
+                class="p-1 px-3 text-lg text-black duration-[200ms]"
+                >Genre</a
+              >
+            </li>
+            <li class="text-white">
+              <a
+                href="#material"
+                class="p-1 px-3 text-lg text-black duration-[200ms]"
+                >Source</a
+              >
+            </li>
+            <li class="text-white">
+              <a
+                href="#highlight"
+                class="p-1 px-3 text-lg text-black duration-[200ms]"
+                >Highlight</a
+              >
+            </li>
+            <li class="text-white">
+              <a
+                href="#fav"
+                class="p-1 px-3 text-lg text-black duration-[200ms]"
+                >Personal fav.</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex items-center gap-6 md:hidden">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu-outline"
+            class="cursor-pointer text-3xl text-black"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+    <main>
+      <section class="flex h-[100vh] bg-[#FDF7E4]" id="intro">
+        <div class="header-slider relative h-full w-full overflow-hidden">
+          <img
+            src="assets/horimiya.jpeg"
+            class="header-item active absolute h-full w-full object-cover object-center"
+            alt=""
+          />
+          <img
+            src="assets/tensura.jpeg"
+            class="header-item absolute h-full w-full object-cover object-center"
+            alt=""
+          />
+          <img
+            src="assets/sages-grandson.jpeg"
+            class="header-item absolute h-full w-full object-cover object-center"
+            alt=""
+          />
+          <img
+            src="assets/magusbride.jpeg"
+            class="header-item absolute h-full w-full object-cover object-center"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="absolute z-10 flex h-full w-full flex-col items-center justify-center bg-black/50 px-20 md:w-[50%]"
+        >
+          <div>
+            <p class="text-6xl text-[#efca7e]">What's anime?</p>
+            <p class="mt-16 text-lg text-white">
+              Anime (アニメ): <br />
+              Refers to hand-drawn and computer-generated animation originating
+              from Japan. <br /><br />
+              Outside Japan and in English, anime refers specifically to
+              animation produced in Japan. However, in Japan and Japanese, anime
+              (a term derived from a shortening the word animation) describes
+              all animated works, regardless of style or origin.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+      <section
+        class="flex min-h-[100vh] flex-col items-center justify-center bg-[#FAEED1] pt-28"
+        id="genre"
+      >
+        <p class="mb-12 text-5xl text-[#7d715b]">Genres</p>
+        <div
+          class="hidden h-[100vh] flex-col items-start justify-center md:flex md:flex-row"
+        >
+          <div class="flex h-[60%] w-full justify-center md:w-fit">
+            <input
+              type="radio"
+              name="genre"
+              id="c1"
+              checked
+              class="peer hidden"
+            />
+            <label
+              for="c1"
+              class="group flex h-[15%] w-full items-center gap-2 overflow-hidden rounded-md bg-white duration-[0.6s] md:h-full md:w-[15vw] md:peer-checked:w-[40vw] lg:w-[10vw]"
+              ><div class="flex h-full w-[15vw] justify-center p-3 lg:w-[10vw]">
+                <div
+                  class="genre-title flex aspect-square w-full cursor-pointer items-center justify-center rounded-lg bg-[#BBAB8C] text-4xl text-white"
+                >
+                  ACTION
+                </div>
+              </div>
+              <div class="genre-desc flex flex-col justify-center gap-3 p-2">
+                <p class="text-left text-3xl font-bold text-[#8c7447]">
+                  Action
+                </p>
+                <p>
+                  Fast-paced plots with intense action using animation style
+                  that makes you feels on edge.
+                </p>
+                <ul class="list-disc font-semibold">
+                  Some noteworthy anime:
+                  <li class="ms-4 mt-2 underline">
+                    <a
+                      href="https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba?q=demon%20slayer&cat=anime"
+                      target="_blank"
+                      >Demon slayer</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/49154/High_Card?q=high%20car&cat=anime"
+                      target="_blank"
+                      >High Card</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/30276/One_Punch_Man?q=one%20punch&cat=anime"
+                      target="_blank"
+                      >One Punch Man</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </div>
+          <div class="flex h-[60%] w-full justify-center md:w-fit">
+            <input type="radio" name="genre" id="c2" class="peer hidden" />
+            <label
+              for="c2"
+              class="group flex h-[15%] w-full items-center gap-2 overflow-hidden rounded-md bg-white duration-[0.6s] md:h-full md:w-[15vw] md:peer-checked:w-[40vw] lg:w-[10vw]"
+              ><div class="flex h-full w-[15vw] justify-center p-3 lg:w-[10vw]">
+                <div
+                  class="genre-title flex aspect-square w-full cursor-pointer items-center justify-center rounded-lg bg-[#BBAB8C] text-4xl text-white"
+                >
+                  ROMANCE
+                </div>
+              </div>
+              <div class="genre-desc flex flex-col justify-center gap-3">
+                <p class="text-left text-3xl font-bold text-[#8c7447]">
+                  Romance
+                </p>
+                <p>
+                  Watch closely as two people get more emotionally close with
+                  each other
+                </p>
+                <ul class="list-disc font-semibold">
+                  Some noteworthy anime:
+                  <li class="ms-4 mt-2 underline">
+                    <a
+                      href="https://myanimelist.net/anime/42897/Horimiya?q=horimiya&cat=anime"
+                      target="_blank"
+                    >
+                      Horimiya</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/4224/Toradora?q=tora&cat=anime"
+                      target="_blank"
+                      >Toradora</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/51552/Watashi_no_Shiawase_na_Kekkon?q=my%20happ&cat=anime"
+                      target="_blank"
+                      >My Happy Mariage
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </div>
+          <div class="flex h-[60%] w-full justify-center md:w-fit">
+            <input type="radio" name="genre" id="c3" class="peer hidden" />
+            <label
+              for="c3"
+              class="group flex h-[15%] w-full items-center gap-2 overflow-hidden rounded-md bg-white duration-[0.6s] md:h-full md:w-[15vw] md:peer-checked:w-[40vw] lg:w-[10vw]"
+              ><div class="flex h-full w-[15vw] justify-center p-3 lg:w-[10vw]">
+                <div
+                  class="genre-title flex aspect-square w-full cursor-pointer items-center justify-center rounded-lg bg-[#BBAB8C] text-4xl text-white"
+                >
+                  FANTASY
+                </div>
+              </div>
+              <div class="genre-desc flex flex-col justify-center gap-3">
+                <p class="text-left text-3xl font-bold text-[#8c7447]">
+                  Fantasy
+                </p>
+                <p>
+                  The mystical magic clashing with swords in a world with
+                  magical beasts and fairies
+                </p>
+                <ul class="list-disc font-semibold">
+                  Some noteworthy anime:
+                  <li class="ms-4 mt-2 underline">
+                    <a
+                      href="https://myanimelist.net/anime/35062/Mahoutsukai_no_Yome?q=magus%20bride&cat=anime"
+                      target="_blank"
+                    >
+                      Ancient Magus Bride
+                    </a>
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/20785/Mahouka_Koukou_no_Rettousei?q=irregula&cat=anime"
+                      target="_blank"
+                    >
+                      Irregular at Magic Highschool</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/37430/Tensei_shitara_Slime_Datta_Ken"
+                      target="_blank"
+                      >Tensura</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </div>
+          <div class="flex h-[60%] w-full justify-center md:w-fit">
+            <input type="radio" name="genre" id="c4" class="peer hidden" />
+            <label
+              for="c4"
+              class="group flex h-[15%] w-full items-center gap-2 overflow-hidden rounded-md bg-white duration-[0.6s] md:h-full md:w-[15vw] md:peer-checked:w-[40vw] lg:w-[10vw]"
+              ><div class="flex h-full w-[15vw] justify-center p-3 lg:w-[10vw]">
+                <div
+                  class="genre-title flex aspect-square w-full cursor-pointer items-center justify-center rounded-lg bg-[#BBAB8C] text-4xl text-white"
+                >
+                  SCI-FI
+                </div>
+              </div>
+              <div class="genre-desc flex flex-col justify-center gap-3">
+                <p class="text-left text-3xl font-bold text-[#8c7447]">
+                  Sci-fi
+                </p>
+                <p>
+                  Story focused on the technologies in the futuristic settings
+                </p>
+                <ul class="list-disc font-semibold">
+                  Some noteworthy anime:
+                  <li class="ms-4 mt-2 underline">
+                    <a
+                      href="https://myanimelist.net/anime/9253/Steins_Gate?q=steins&cat=anime"
+                      target="_blank"
+                      >Steins;Gate</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch"
+                      target="_blank"
+                      >Code Geass</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/49828/Kidou_Senshi_Gundam__Suisei_no_Majo?q=the%20witch%20from&cat=anime"
+                      target="_blank"
+                      >The Witch from Mercury</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+        <div
+          class="flex h-[100vh] w-full flex-col items-center justify-center gap-y-2 md:hidden"
+        >
+          <div class="group flex h-fit w-full justify-center">
+            <input
+              type="radio"
+              name="genre-sm"
+              id="c1-sm"
+              checked
+              class="peer hidden"
+            />
+            <label
+              for="c1-sm"
+              class="genre-sm h-[15vh] w-[90%] cursor-pointer overflow-hidden rounded-md bg-white duration-[0.6s] peer-checked:h-fit"
+            >
+              <div class="flex h-[15vh] w-full justify-center p-3">
+                <div
+                  class="flex aspect-square w-full items-center justify-center rounded-lg bg-[#BBAB8C] text-4xl font-bold text-white"
+                >
+                  ACTION
+                </div>
+              </div>
+              <div class="genre-desc flex flex-col justify-center gap-3 p-16">
+                <p class="text-left text-3xl font-bold text-[#8c7447]">
+                  Action
+                </p>
+                <p>
+                  Fast-paced plots with intense action using animation style
+                  that makes you feels on edge.
+                </p>
+                <ul class="list-disc font-semibold">
+                  Some noteworthy anime:
+                  <li class="ms-4 mt-2 underline">
+                    <a
+                      href="https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba?q=demon%20slayer&cat=anime"
+                      target="_blank"
+                      >Demon slayer</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/49154/High_Card?q=high%20car&cat=anime"
+                      target="_blank"
+                      >High Card</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/30276/One_Punch_Man?q=one%20punch&cat=anime"
+                      target="_blank"
+                      >One Punch Man</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </div>
+          <div class="group flex h-fit w-full justify-center">
+            <input
+              type="radio"
+              name="genre-sm"
+              id="c2-sm"
+              class="peer hidden"
+            />
+            <label
+              for="c2-sm"
+              class="genre-sm h-[15vh] w-[90%] cursor-pointer overflow-hidden rounded-md bg-white duration-[0.6s] peer-checked:h-fit"
+            >
+              <div class="flex h-[15vh] w-full justify-center p-3">
+                <div
+                  class="flex aspect-square w-full items-center justify-center rounded-lg bg-[#BBAB8C] text-4xl font-bold text-white"
+                >
+                  ROMANCE
+                </div>
+              </div>
+              <div class="genre-desc flex flex-col justify-center gap-3 p-16">
+                <p class="text-left text-3xl font-bold text-[#8c7447]">
+                  Romance
+                </p>
+                <p>
+                  Watch closely as two people get more emotionally close with
+                  each other
+                </p>
+                <ul class="list-disc font-semibold">
+                  Some noteworthy anime:
+                  <li class="ms-4 mt-2 underline">
+                    <a
+                      href="https://myanimelist.net/anime/42897/Horimiya?q=horimiya&cat=anime"
+                      target="_blank"
+                    >
+                      Horimiya</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/4224/Toradora?q=tora&cat=anime"
+                      target="_blank"
+                      >Toradora</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/51552/Watashi_no_Shiawase_na_Kekkon?q=my%20happ&cat=anime"
+                      target="_blank"
+                      >My Happy Mariage
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </div>
+          <div class="group flex h-fit w-full justify-center">
+            <input
+              type="radio"
+              name="genre-sm"
+              id="c3-sm"
+              class="peer hidden"
+            />
+            <label
+              for="c3-sm"
+              class="genre-sm h-[15vh] w-[90%] cursor-pointer overflow-hidden rounded-md bg-white duration-[0.6s] peer-checked:h-fit"
+            >
+              <div class="flex h-[15vh] w-full justify-center p-3">
+                <div
+                  class="flex aspect-square w-full items-center justify-center rounded-lg bg-[#BBAB8C] text-4xl font-bold text-white"
+                >
+                  FANTASY
+                </div>
+              </div>
+              <div class="genre-desc flex flex-col justify-center gap-3 p-16">
+                <p class="text-left text-3xl font-bold text-[#8c7447]">
+                  Fantasy
+                </p>
+                <p>
+                  The mystical magic clashing with swords in a world with
+                  magical beasts and fairies
+                </p>
+                <ul class="list-disc font-semibold">
+                  Some noteworthy anime:
+                  <li class="ms-4 mt-2 underline">
+                    <a
+                      href="https://myanimelist.net/anime/35062/Mahoutsukai_no_Yome?q=magus%20bride&cat=anime"
+                      target="_blank"
+                    >
+                      Ancient Magus Bride
+                    </a>
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/20785/Mahouka_Koukou_no_Rettousei?q=irregula&cat=anime"
+                      target="_blank"
+                    >
+                      Irregular at Magic Highschool</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/37430/Tensei_shitara_Slime_Datta_Ken"
+                      target="_blank"
+                      >Tensura</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </div>
+          <div class="group flex h-fit w-full justify-center">
+            <input
+              type="radio"
+              name="genre-sm"
+              id="c4-sm"
+              class="peer hidden"
+            />
+            <label
+              for="c4-sm"
+              class="genre-sm h-[15vh] w-[90%] cursor-pointer overflow-hidden rounded-md bg-white duration-[0.6s] peer-checked:h-fit"
+            >
+              <div class="flex h-[15vh] w-full justify-center p-3">
+                <div
+                  class="flex aspect-square w-full items-center justify-center rounded-lg bg-[#BBAB8C] text-4xl font-bold text-white"
+                >
+                  SCI-FI
+                </div>
+              </div>
+              <div class="genre-desc flex flex-col justify-center gap-3 p-16">
+                <p class="text-left text-3xl font-bold text-[#8c7447]">
+                  sci-fi
+                </p>
+                <p>
+                  Story focused on the technologies in the futuristic settings
+                </p>
+                <ul class="list-disc font-semibold">
+                  Some noteworthy anime:
+                  <li class="ms-4 mt-2 underline">
+                    <a
+                      href="https://myanimelist.net/anime/9253/Steins_Gate?q=steins&cat=anime"
+                      target="_blank"
+                      >Steins;Gate</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch"
+                      target="_blank"
+                      >Code Geass</a
+                    >
+                  </li>
+                  <li class="ms-4 underline">
+                    <a
+                      href="https://myanimelist.net/anime/49828/Kidou_Senshi_Gundam__Suisei_no_Majo?q=the%20witch%20from&cat=anime"
+                      target="_blank"
+                      >The Witch from Mercury</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+      <section
+        class="flex h-fit flex-col items-center bg-[#FDF7E4] py-36"
+        id="material"
+      >
+        <p class="mb-7 text-center text-5xl text-[#BBAB8C]">
+          Anime's source material
+        </p>
+        <p class="text-center">
+          Some anime have their source that they referred to. Some of them are:
+        </p>
+        <div class="mt-20 flex h-fit w-[90%] flex-wrap justify-center">
+          <div class="card flex h-fit w-[50%] p-2 md:w-[30%] lg:w-[25%]">
+            <div
+              class="flip-inner relative aspect-square w-full rounded-lg shadow-md"
+            >
+              <div
+                class="front absolute flex h-full w-full items-center justify-center rounded-lg bg-[#BBAB8C]"
+              >
+                <ion-icon
+                  name="book-outline"
+                  class="h-[20%] w-[20%] rounded-full bg-white p-3 shadow-md"
+                ></ion-icon>
+              </div>
+              <div
+                class="back absolute flex h-full w-full flex-col items-center justify-center rounded-md bg-white p-2"
+              >
+                <p class="mb-3 text-center text-lg text-[#4c473d]">Manga</p>
+                <p class="text-center text-sm">
+                  Means comic in Japanese and the most common source material of
+                  anime.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card flex h-fit w-[50%] p-2 md:w-[30%] lg:w-[25%]">
+            <div
+              class="flip-inner relative aspect-square w-full rounded-lg shadow-md"
+            >
+              <div
+                class="front absolute flex h-full w-full items-center justify-center rounded-lg bg-[#BBAB8C]"
+              >
+                <ion-icon
+                  name="book-outline"
+                  class="h-[20%] w-[20%] rounded-full bg-white p-3 shadow-md"
+                ></ion-icon>
+              </div>
+              <div
+                class="back absolute flex h-full w-full flex-col items-center justify-center rounded-md bg-white p-2"
+              >
+                <p class="mb-3 text-center text-lg text-[#4c473d]">Novels</p>
+                <p class="text-center text-sm">
+                  This include webnovels, lightnovels and visual novels. Some
+                  even got adapted into manga before adapted into anime
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card flex h-fit w-[50%] p-2 md:w-[30%] lg:w-[25%]">
+            <div
+              class="flip-inner relative aspect-square w-full rounded-lg shadow-md"
+            >
+              <div
+                class="front absolute flex h-full w-full items-center justify-center rounded-lg bg-[#BBAB8C]"
+              >
+                <ion-icon
+                  name="book-outline"
+                  class="h-[20%] w-[20%] rounded-full bg-white p-3 shadow-md"
+                ></ion-icon>
+              </div>
+              <div
+                class="back absolute flex h-full w-full flex-col items-center justify-center rounded-md bg-white p-2"
+              >
+                <p class="mb-3 text-center text-lg text-[#4c473d]">Manhwa</p>
+                <p class="text-center text-sm">
+                  Unlike manga, manhwa is korean comic. Usually come in the form
+                  of webcomic. Some of them got adapted by Japanese anime
+                  studio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+      <section
+        class="flex min-h-[100vh] w-full flex-col items-center justify-center bg-[#FAEED1] pt-10"
+        id="highlight"
+      >
+        <p class="my-7 text-center text-7xl text-[#BBAB8C]">My Highlight</p>
+        <p class="mb-10 text-center text-lg">of the spring 2024 anime!!</p>
+        <div
+          class="group flex h-[70vh] w-[75%] items-center justify-center md:h-[50vh] lg:h-[70vh]"
+        >
+          <div
+            class="group/top4 hidden h-full w-[60%] items-center justify-center p-2 transition-[01s] hover:!w-[70%] group-hover:w-[50%] md:flex"
+          >
+            <div
+              class="hl-1 flex h-full w-full items-end justify-start gap-x-6 rounded-md bg-white p-7"
+            >
+              <div
+                class="flex aspect-square h-[12%] items-center justify-center rounded-lg bg-[#BBAB8C] text-white"
+              >
+                1
+              </div>
+              <div
+                class="flex h-[12%] items-center bg-black/30 p-2 font-bold text-white backdrop:blur-sm"
+              >
+                Mission:Yozakura Family
+              </div>
+            </div>
+          </div>
+          <div
+            class="group/top4 flex h-full w-full flex-col items-center justify-center gap-y-2 p-2 transition-[01s] md:w-[40%] md:hover:!w-[50%] md:group-hover:w-[30%]"
+          >
+            <div
+              class="group/self relative h-[20%] w-full rounded-md bg-white transition-[0.6s] hover:!h-[40%] group-hover/top4:h-[15%] md:hidden md:h-[25%] md:group-hover/top4:h-[10%]"
+            >
+              <div
+                class="hl-1 flex h-full w-full items-center justify-start gap-x-3 rounded-md bg-white p-7 transition-[0.6s] group-hover/self:items-end group-hover/self:p-3"
+              >
+                <div
+                  class="flex aspect-square h-[6vh] items-center justify-center rounded-md bg-[#BBAB8C] p-6 text-white"
+                >
+                  1
+                </div>
+                <div
+                  class="p-2backdrop-blur-sm flex h-[6vh] w-fit items-center bg-black/30 font-bold text-white"
+                >
+                  Mission:Yozakura Family
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group/self relative h-[20%] w-full rounded-md bg-white transition-[0.6s] hover:!h-[40%] group-hover/top4:h-[15%] md:h-[25%] md:group-hover/top4:h-[20%]"
+            >
+              <div
+                class="hl-2 flex h-full w-full items-center justify-start gap-x-3 rounded-md bg-white p-7 transition-[0.6s] group-hover/self:items-end group-hover/self:p-3"
+              >
+                <div
+                  class="flex aspect-square h-[6vh] items-center justify-center rounded-md bg-[#BBAB8C] p-6 text-white"
+                >
+                  2
+                </div>
+                <div
+                  class="h -[6vh] flex w-fit items-center bg-black/30 p-2 font-bold text-white backdrop-blur-sm"
+                >
+                  Tensura S3
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group/self relative h-[20%] w-full rounded-md bg-white transition-[0.6s] hover:!h-[40%] group-hover/top4:h-[15%] md:h-[25%] md:group-hover/top4:h-[20%]"
+            >
+              <div
+                class="hl-3 flex h-full w-full items-center justify-start gap-x-3 rounded-md bg-white p-7 transition-[0.6s] group-hover/self:items-end group-hover/self:p-3"
+              >
+                <div
+                  class="flex aspect-square h-[6vh] items-center justify-center rounded-md bg-[#BBAB8C] p-6 text-white"
+                >
+                  3
+                </div>
+                <div
+                  class="flex h-[6vh] w-fit items-center bg-black/30 p-2 font-bold text-white backdrop-blur-sm"
+                >
+                  Wind Breaker
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group/self relative h-[20%] w-full rounded-md bg-white transition-[0.6s] hover:!h-[40%] group-hover/top4:h-[15%] md:h-[25%] md:group-hover/top4:h-[20%]"
+            >
+              <div
+                class="hl-4 flex h-full w-full items-center justify-start gap-x-3 rounded-md bg-white p-7 transition-[0.6s] group-hover/self:items-end group-hover/self:p-3"
+              >
+                <div
+                  class="flex aspect-square h-[6vh] items-center justify-center rounded-md bg-[#BBAB8C] p-6 text-white"
+                >
+                  4
+                </div>
+                <div
+                  class="flex h-[6vh] w-fit items-center bg-black/30 p-2 font-bold text-white backdrop-blur-sm"
+                >
+                  Demon Slayer S4
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="group/self relative h-[20%] w-full rounded-md bg-white transition-[0.6s] hover:!h-[40%] group-hover/top4:h-[15%] md:h-[25%] md:group-hover/top4:h-[20%]"
+            >
+              <div
+                class="hl-5 flex h-full w-full items-center justify-start gap-x-3 rounded-md bg-white p-7 transition-[0.6s] group-hover/self:items-end group-hover/self:p-3"
+              >
+                <div
+                  class="flex aspect-square h-[6vh] items-center justify-center rounded-md bg-[#BBAB8C] p-6 text-white"
+                >
+                  5
+                </div>
+                <div
+                  class="flex h-[6vh] w-fit items-center bg-black/30 p-2 font-bold text-white backdrop-blur-sm"
+                >
+                  Archdemon's Dilemma
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+      <section
+        class="flex h-fit flex-col items-center justify-center bg-[#FDF7E4] py-24"
+        id="fav"
+      >
+        <p class="my-12 text-6xl">My ALL TIME personal favorite</p>
+        <div class="flex h-fit w-full items-center justify-center">
+          <button
+            class="mx-5 flex h-[45px] w-[45px] items-center justify-center rounded-xl bg-[#eee] text-xl font-bold opacity-[.5] hover:bg-black hover:text-white hover:opacity-80"
+            id="prev"
+          >
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </button>
+
+          <div
+            class="fav-slider relative flex aspect-video h-fit w-[70%] gap-4 overflow-auto"
+          >
+            <div
+              class="active item fav-1 absolute flex h-full w-[100%] shrink-0 items-end after:absolute after:h-full after:w-full after:bg-gradient-to-t after:from-black after:to-[40%]"
+            >
+              <div
+                class="z-10 flex h-[30%] w-full flex-col items-center gap-y-2"
+              >
+                <p class="text-center text-5xl text-white">Horimiya</p>
+                <p class="text-center text-white">
+                  Romance | Comedy | Highschool
+                </p>
+              </div>
+            </div>
+            <div
+              class="item fav-2 absolute flex h-full w-[100%] shrink-0 items-end after:absolute after:h-full after:w-full after:bg-gradient-to-t after:from-black after:to-[40%]"
+            >
+              <div
+                class="z-10 flex h-[30%] w-full flex-col items-center gap-y-2"
+              >
+                <p class="text-center text-5xl text-white">
+                  Ancient Magus Bride
+                </p>
+                <p class="text-center text-white">Romance | Fantasy | Drama</p>
+              </div>
+            </div>
+            <div
+              class="item fav-3 absolute flex h-full w-[100%] shrink-0 items-end after:absolute after:h-full after:w-full after:bg-gradient-to-t after:from-black after:to-[40%]"
+            >
+              <div
+                class="z-10 flex h-[40%] w-full flex-col items-center gap-y-2"
+              >
+                <p class="px-20 text-center text-5xl text-white">
+                  Tensura (That time I Got Reincarnated as a Slime)
+                </p>
+                <p class="text-center text-white">
+                  Comedy | Fantasy | Adventure
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="mx-5 flex h-[45px] w-[45px] items-center justify-center rounded-xl bg-[#eee] text-xl font-bold opacity-[.5] hover:bg-black hover:text-white hover:opacity-80"
+            id="next"
+          >
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

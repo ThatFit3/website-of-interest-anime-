@@ -1,0 +1,136 @@
+.header-item {
+  visibility: hidden;
+  transition-duration: 1s;
+  transition-delay: 1s;
+  transform: translateX(100%);
+}
+
+.header-item.active {
+  visibility: visible;
+  transition-delay: 0s;
+  transform: translateX(0);
+  z-index: 5;
+}
+
+label {
+  transition-timing-function: cubic-bezier(0.28, -0.03, 0, 0.99);
+  margin: 0 7px;
+}
+
+label > .genre-desc {
+  transform: translateY(30%);
+  transition-duration: 0s;
+  transition-delay: 0s;
+  opacity: 0;
+}
+
+input:checked + label > .genre-desc {
+  transform: translateY(0);
+  opacity: 1;
+  transition-duration: 0.6s;
+  transition-delay: 0.3s;
+}
+
+.genre-sm {
+  transition-timing-function: cubic-bezier(0.99, 0, -0.03, 0.28);
+}
+
+.genre-title {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: start;
+}
+
+.fav-slider::-webkit-scrollbar {
+  width: 0;
+}
+
+.fav-slider > .item {
+  visibility: hidden;
+  transition-duration: 0.6s;
+  transition-delay: 0.6s;
+  transform: translateX(100%);
+}
+
+.fav-slider .item.active {
+  visibility: visible;
+  transition-delay: 0s;
+  transform: translateX(0);
+  z-index: 5;
+}
+
+.fav-1 {
+  background-image: url("assets/horimiya.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.fav-2 {
+  background-image: url("assets/magusbride.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.fav-3 {
+  background-image: url("assets/tensura.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.fav-4 {
+  background-image: url("assets/sages-grandson.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.fav-5 {
+  background-image: url("assets/happy-mariage.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hl-1 {
+  background-image: url(assets/hl-yozakura.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.hl-2 {
+  background-image: url(assets/hl-tensura.jpeg);
+  background-position: center 75%;
+  background-size: cover;
+}
+.hl-3 {
+  background-image: url(assets/hl-wind-breaker.jpeg);
+  background-position: center 20%;
+  background-size: cover;
+}
+.hl-4 {
+  background-image: url(assets/hl-demon-slayer.jpeg);
+  background-position: center 40%;
+  background-size: cover;
+}
+.hl-5 {
+  background-image: url(assets/hl-elfbride.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.flip-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flip-inner:hover {
+  transform: rotateY(180deg);
+}
+
+.card {
+  perspective: 1000px;
+}
